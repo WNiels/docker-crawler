@@ -1,10 +1,10 @@
-FROM python:3
+FROM python:latest
 
-WORKDIR /usr/src/app
+WORKDIR /app
 
-COPY requirements.txt ./
-RUN pip3 install --no-cache-dir -r requirements.txt
+COPY ./requirements.txt /app
+RUN pip install --no-cache-dir --upgrade -r requirements.txt
 
-COPY . .
+COPY . /app
 
-CMD [ "python3", "go-spider.py" ]
+CMD [ "python", "go-spider.py" ]

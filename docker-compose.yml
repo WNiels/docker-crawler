@@ -4,4 +4,4 @@ services:
   crawler:
     build: .
     volumes:
-      - .:/usr/src/app
+      - .:/app
